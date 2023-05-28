@@ -1,0 +1,21 @@
+
+.header
+    position: relative
+    height: 95vh
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/header_background.jpg) center / cover no-repeat    // center/cover no-repeat изображение растягивается на весь экран и не дублируется
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)   // clip-path: =>  помогает создавать разные визуальные эфекты (обрезает элименты под разные формы)=> https://bennettfeely.com/clippy/
+    &__logo
+        position: absolute
+        left: 5rem
+        top: 5rem
+        height: 5.6rem
+        height: 7rem
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)    //центруем позиционирование по двум осям -> translate(X, Y)
+        width: 100% // при уменьшении окна текст переходит на следю строчку
+        text-align: center  // выравниваем текст по центру
+
+        
