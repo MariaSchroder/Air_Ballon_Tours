@@ -1,4 +1,9 @@
-
+body
+    font-family: 'Roboto', sans-serif // шрифт без засечек
+    font-weight: 400
+    color: $color-gray
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem     // Межбуквенное расстояние
 
 .title-first
     color: $color-white
@@ -31,4 +36,37 @@
         
 // backface-visibility  ->  Помогает нормализовать/выровнить поведение анимации (пр.прячет задние контуры, уберает дергание элементов)
 
+// background-clip - это свойство настраивает конкретные границы фонового изображения, по граници контейнера (border-box), по граници контента (content-box) или ограничивает по падингу (padding-box)
+    
+// -webkit -> префикс - приставки которые позволяют использовать те или иные экперементальные свойства (которые ещё не одобренны из какойто последней версии SCC)
 
+// виндорные префиксы нужны для того чтобы новое эксперементальное свойство работали в том или ином браузере (в разных браузерах могут использоваться разные приставки)
+
+
+.title-secondary
+    // text-align: center
+    display: inline-block
+    font-size: $font-size-paragraph-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+    -webkit-background-clip: text   // градиент прячится под текст
+    color: transparent      // цвет текста становится прозрачным и показывается наш градиент
+    transition: all .4s     // плавность анимации
+    backface-visibility: hidden     // уберает глюки в анимации
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)      // анимация на искосок
+        text-shadow: $shadow-h2   // тень текста
+
+.title-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+
+.paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem   // межбуквенное растояние
+    line-height: 140%       // высота строки определяет количество места над и под встроенными элементами
+    font-weight: 400
