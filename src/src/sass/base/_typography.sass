@@ -1,3 +1,9 @@
+body
+    font-family: 'Roboto', sans-serif // шрифт без засечек
+    font-weight: 400
+    color: $color-gray
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem     // Межбуквенное расстояние
 
 .title-first
     color: $color-white
@@ -40,7 +46,7 @@
 .title-secondary
     // text-align: center
     display: inline-block
-    font-size: 3.6rem
+    font-size: $font-size-paragraph-h2
     letter-spacing: 1rem
     text-transform: uppercase
     font-weight: 800
@@ -53,5 +59,14 @@
         transform: skewY(2deg) skewX(15deg) scale(1.1)      // анимация на искосок
         text-shadow: $shadow-h2   // тень текста
 
+.title-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
 
-    
+.paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem   // межбуквенное растояние
+    line-height: 140%       // высота строки определяет количество места над и под встроенными элементами
+    font-weight: 400

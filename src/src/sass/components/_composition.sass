@@ -1,0 +1,25 @@
+.composition
+    position: relative
+    &__photo
+        width: 55%
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        position: absolute
+        z-index: 10    // скрываются под изображением с z-index: 20
+        transition: all .2s     // плавность анимации
+        outline-offset: 1rem    // отступ между рамкой и изображением
+        &_n1
+            top: 0
+            left: 0rem
+        &_n2
+            top: 2rem
+            right: 0rem
+        &_n3
+            top: 11rem
+            left: 10rem
+        &:hover 
+            transform: scale(1.1)   // изображение увеличивается
+            z-index: 20  // при наведении на изображение картинка выходит на передний план
+            outline: 1rem solid $color-brown-light    // рамка у изображения (outline можно задавать отступ от элемента)
+    &:hover &__photo:not(:hover)
+        transform: scale(.95)   // задние изображеня уменьшаются когда наводим на изображение с hover
